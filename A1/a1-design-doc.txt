@@ -1,0 +1,13 @@
+Pseudo Code:
+1. Program displays menu to user
+2. User selects desired selection
+3. if user chooses to add element to the end of array
+3a. program indicates size current size of array and adds 1 to that and assigns new element to that position in the array
+4. if user chooses to insert element.
+4a. program asks user for the index they want to insert element at
+4b. shift existing elements in array to make room at desired index and add new element to that position.
+5. If user chooses to delete element from given position.
+5a. program removes item at index from array, and copies the remaining elements to a new array with updated array size.
+6. If user selects Show program will display the elements of the array to the user.
+7. If user selects count, program will display how many elements are in the array.
+8. if user selects clear delete, create new array and replace existing array with empty array.
