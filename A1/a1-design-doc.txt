@@ -1,6 +1,6 @@
 Pseudo Code:
 1. Program displays menu to user
-2. User selects desired selection
+2. User selects desired action
 3. if user chooses to add element to the end of array
 3a. program indicates size current size of array and adds 1 to that and assigns new element to that position in the array
 4. if user chooses to insert element.
