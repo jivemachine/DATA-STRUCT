@@ -1,33 +1,18 @@
 // Jeremy Cobb
+// 09-02-22
 // Assignment 1
-// 08/29/22
 #include <iostream>
+#include "lists.h"
 using namespace std;
-
-
-// Implement a menu based program with the following array-based list functions:
-
-// ADD (at the end of array)
-// INSERT (element at a given location)
-// DELETE (element from a given location)
-// SHOW (all array elements)
-// COUNT (total number of elements)
-// CLEAR (initialize array)
-
-// prototypes
-void ADD() {
-
-}
-
 
 int main() {
 
-    // Initalizing empty array
-    array[];
+    // initalizing lists functions
+    lists O;
 
-    // initalizing input variable
-    int input;
-    int ARRAY_SIZE = 0;
+    // initalizing input var
+    int input, addInput, insertInput, insertIndex, deleteInput;
+    
 
     cout << "Data Entry Menu:" << endl;
     cout << "Would you like to..." << endl;
@@ -41,20 +26,25 @@ int main() {
     cin >> input;
 
     if (input == 1) {
-
+        cout << "Element to add to array: ";
+        cin >> addInput;
+        O.ADD(addInput);
     } else if (input == 2) {
-
-    } else if (input == 3) {
-
+        cout << "Element to insert: ";
+        cin >> insertInput;
+        cout << "At what index: ";
+        cin >>  insertIndex;
+        O.INSERT(insertInput, insertIndex);
+    } else if(input == 3) {
+        cout << "What element would you like to delete from array: ";
+        cin >> deleteInput;
+        O.DELETE(deleteInput);
     } else if (input == 4) {
-
+        O.SHOW();
     } else if (input == 5) {
-
-    } else if(input == 6) {
-
-    } else {
-        
+        O.COUNT();
+    } else if (input == 6) {
+        O.CLEAR();
     }
+  
 }
-
-// functions
