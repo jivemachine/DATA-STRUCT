@@ -42,7 +42,7 @@ int main() {
                 cout << "\n\n";
             break;
             case 3:
-                cout << "\n\nEnter how many more number you want: ";
+                cout << "\n\nEnter how many more data points to index: ";
                 cin >> m;
 
                 for (i = n; i < n + m; i++) {
