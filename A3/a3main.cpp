@@ -30,6 +30,22 @@ bool balancedP(string input) {
     return false;
 }
 
+int len(const char* ch)
+{
+    int len = 0;
+    while (ch[len]) {
+        ++len;
+    } 
+    return len;
+}
+
+
+bool balancedParenthesis(string input) {
+    
+    for(int i = 0; i < input.length(); i++)
+    array[n];
+}
+
 
 // driver code
 int main() {
