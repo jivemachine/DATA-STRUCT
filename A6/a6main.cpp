@@ -89,7 +89,7 @@ int main()
     int arr[] = { 8, 6, 7, 5, 3, 0 , 9 };
     int arr2[] = { 8, 6, 7, 5, 3, 0, 9 };
     int n = sizeof(arr) / sizeof(int); 
-    struct timespec start, stop, start2, stop2; 
+    struct timespec start, stop, start2, stop2, start3, start4, stop3, stop4; 
 
     cout << "Testing Sorting Algorithmns" << endl;
 
@@ -119,16 +119,16 @@ int main()
 
     cout << "Now With Larger Arrays" << endl << endl;
     
-    int arr3[100000], arr4[100000];
+    int arr3[100000], arr4[100000], arr5[100000], arr6[100000];
 
     for(int i = 0, j = 100000; i < 100000; i++, j--) {
         arr3[i] = j;
     }
 
     int beginning = 5000;
-    int end = 99999;
+    int end = 29999;
 
-    cout << "QuickSort " << endl;
+    cout << "QuickSort with" << endl;
      
     
 
@@ -166,7 +166,50 @@ int main()
 
     cout << "\n";
 
+
+    
+    beginning = 10000;
+    end = 99999;
+
+    cout << "\n\n";
+
+    cout << "QuickSort with even larger array" << endl;
+     
+    
+
+    clock_gettime(CLOCK_REALTIME, &start3); // time start
+    quickSort(arr5, beginning, end);
+    clock_gettime(CLOCK_REALTIME, &stop3); // time stop
+
+    // format time
+    long seconds3 = stop3.tv_sec - start3.tv_sec;
+    long nanoseconds3 = stop3.tv_nsec - start3.tv_nsec;
+    
+    double duration3 = seconds3 + nanoseconds3*1e-9;
+     
+     // display time it takes  to run alg
+    cout<<"Time taken for quick sort of "<< end - beginning + 1<<" elements: "<< duration3 <<" sec";
+
+    
+    cout << "\n\n";
+
+    cout << "Bubble Sort with even larger array" << endl;
+
+
+    clock_gettime(CLOCK_REALTIME, &start4); // time start
+    BubbleSort(arr6, beginning , end); 
+    clock_gettime(CLOCK_REALTIME, &stop4); // time stop
+
+
+    // formatting time for bubble sort alg
+    long seconds4 = stop4.tv_sec - start4.tv_sec;
+    long nanoseconds4 = stop4.tv_nsec - start4.tv_nsec;
+    double duration4 = seconds4 + nanoseconds4*1e-9;
+
+    // display time it takes to run alg
+    cout<<"Time taken for bubble sort of "<< end - beginning + 1<<" elements: "<< duration4 <<" sec";
+
+    cout << "\n\n";
+
     return 0;
 }
-
-
